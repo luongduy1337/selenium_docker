@@ -10,13 +10,13 @@ pipeline {
 
         stage("Build Image"){
             steps {
-                echo "docker build -t=luongtranduy/selenium ."
+                sh "docker build -t=luongtranduy/selenium ."
             }
         }
 
         stage("Pushing Image"){
             steps {
-                echo "docker push luongtranduy/selenium"
+                sh "docker push luongtranduy/selenium"
             }
         }
     }
